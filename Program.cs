@@ -9,10 +9,21 @@ namespace Cheers
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("What's your name?");
-            Console.Write("> ");
-            String user_name = Console.ReadLine();
+            //Variables section
+            String prompt = "> ";
+            String cheer_prefix = "Give me a";
 
+            Console.WriteLine("What's your name?");
+            Console.Write(prompt);
+            String user_name = Console.ReadLine(); //Read from terminal save to a variable
+
+            for(int i = 0; i < user_name.Length; i++) {
+                Console.WriteLine(cheer_prefix + ".." + user_name[i]);
+            }
+
+            //User_name.toUpper() is turning the name  to uppercase
+            //ToUpper() accepts no arguments
+            //ToUpper() is functionality 
             Console.WriteLine(user_name.ToUpper() + " is.. GRAND!");
         }
     }
